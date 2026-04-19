@@ -5,7 +5,7 @@ import nltk
 
 app = Flask(__name__)
 sia = SentimentIntensityAnalyzer()
-CORS(app, resources={r"/analyze": {"origins": "http://127.0.0.1:5500"}})
+CORS(app)
 
 @app.route('/analyze', methods=['POST'])
 def analyze_sentiment():
